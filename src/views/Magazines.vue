@@ -1,12 +1,11 @@
 <template>
-  <div id="list-test">
+  <div id="list-test"  v-bind:style="'size'">
     <magazine-list />
-    <!-- <magazine-grid /> -->
   </div>
 </template>
 
 <script>
-// import MagazineGrid from '../components/MagazineGrid.vue';
+
 import MagazineList from "../components/MagazineList.vue";
 export default {
   components: {

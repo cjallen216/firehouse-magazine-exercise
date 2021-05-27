@@ -1,6 +1,6 @@
 <template>
-  <div class="mag-container">
-    <div class="mag-flex">
+  <div class="mag-container" v-bind:style="'size'">
+    <div class="mag-flex" v-bind:style="'size'">
       <magazine-card
         v-bind:magazine="magazine"
         v-for="magazine in $store.state.magazines"

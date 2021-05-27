@@ -1,6 +1,6 @@
 <template>
-  <div class="magazine-container">
-    <div class="magazine-flex">
+  <div class="magazine-container" v-bind:style="'size'">
+    <div class="magazine-flex" v-bind:style="'size'">
     <magazine-card
       v-show="!magazine.featured"
       v-bind:magazine="magazine"

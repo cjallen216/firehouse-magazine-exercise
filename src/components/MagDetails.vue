@@ -1,5 +1,5 @@
 <template>
-  <div class="details" v-bind:class="{ img: magazine.img }">
+  <div class="details" v-bind:class="{ img: magazine.img }" v-bind:style="'size'">
     <img v-bind:src="'https://img.firehouse.com/files/base/cygnus/fhc/image/' + magazine.img + '.png'" />
     <h3 class="magazine-month">{{magazine.title}}</h3>
   </div>

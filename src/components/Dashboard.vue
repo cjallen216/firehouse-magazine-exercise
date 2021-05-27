@@ -1,11 +1,11 @@
 <template>
-  <main id="main-grid">
-    <div class="home-container">
-      <div id="current-issue">
+  <main id="main-grid" v-bind:style="'size'">
+    <div class="home-container" v-bind:style="'size'">
+      <div id="current-issue"  v-bind:style="'size'">
         <featured-magazine />
       </div>
-      <div id="previous-issues">
-        <magazines id="mag-grid" />
+      <div id="previous-issues" v-bind:style="'size'">
+        <magazines id="mag-grid" v-bind:style="'size'"/>
       </div>
     </div>
     <div id="button-container">
@@ -25,6 +25,24 @@ export default {
     FeaturedMagazine,
     MagazineButtons,
   },
+  props: [
+    'size'
+  ],
+  computed: {
+    checkSize() {
+      let mediaSize = screen.width;
+      if (mediaSize > 1200) {
+        return '.large'
+      }
+      else if (mediaSize >500 && mediaSize < 1200) {
+        return '.medium'
+      }
+      else {
+        return '.small'
+      }
+    }
+  }
+
 };
 </script>
 
@@ -52,7 +70,7 @@ export default {
 #previous-issues {
   display: flex;
   flex-direction: row;
-  flex-shrink: auto;
+  flex-grow: auto;
   max-width: 100%;
   width: 700px;
 }
@@ -64,6 +82,20 @@ export default {
   align-items: center;
   gap: 2px;
 }
+
+.large {
+  width: 900px;
+}
+
+.medium {
+  width: 500px;
+}
+
+.small {
+  width: 200px;
+}
+
+
 
 /* @media screen and (max-width: 1325px) {
 

@@ -1,5 +1,5 @@
 <template>
-  <div id="featured-issue">
+  <div id="featured-issue" v-bind:style="'size'">
       <magazine-card
       v-show="magazine.featured"
       v-bind:magazine="magazine"
@@ -22,9 +22,19 @@ export default {
 
 <style>
 #featured-issue img {
-    padding: 1%;
-    max-width: 100%;
-    width: 600px;
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%;
+}
+
+#featured-issue {
+  position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
 }
 
 </style>

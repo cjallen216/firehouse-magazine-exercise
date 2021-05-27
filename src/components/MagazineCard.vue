@@ -1,5 +1,5 @@
 <template>
-  <div class="card" v-bind:class="{ read: magazine.read }">
+  <div class="card" v-bind:class="{ read: magazine.read }"  v-bind:style="'size'">
     <div class="cover-image">
       <router-link
         v-bind:to="{ name: 'magazine-details', params: { img: magazine.img } }"
